@@ -1,0 +1,4 @@
+- css reset
+- layout: header, footer, sections
+- routes
+- content
