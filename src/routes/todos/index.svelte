@@ -115,7 +115,6 @@
 		align-items: center;
 		margin: 0 0 0.5rem 0;
 		padding: 0.5rem;
-		background-color: white;
 		border-radius: 8px;
 		filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
 		transform: translate(-1px, -1px);

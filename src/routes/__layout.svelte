@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
-	import '../app.scss';
+	import Header from '$lib/Header.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import '../styles/app.scss';
 </script>
 
 <Header />
@@ -8,6 +9,9 @@
 <main>
 	<slot />
 </main>
+
+<Footer/>
+
 
 
 <style>
@@ -19,6 +23,5 @@
 		width: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
-		background-color: yellow;
 	}
 </style>

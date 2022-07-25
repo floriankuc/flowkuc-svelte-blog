@@ -1,0 +1,138 @@
+@import '@fontsource/fira-mono';
+@import './fonts.scss';
+@import './variables.scss';
+
+:root {
+	font-family: 'Source Sans Pro', $font-fallback;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	overflow-y: scroll;
+	background-color: $color-white;	
+	font-family: 'Source Sans Pro';
+
+	> div {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1,
+h2,
+p {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: $color-red;
+	text-decoration: none;
+}
+
+ul,
+ol[role="list"] {
+  list-style-type: none;
+	display: flex;
+}
+
+input,
+button,
+textarea {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+pre {
+	font-size: 16px;
+	font-family: $font-mono;
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+}
+
+// blockquote {
+//   font-size: 1.5rem;
+//   --padding-block: 1rem;
+//   --padding-inline: 1.25rem;
+//   --color: var(--theme-divider);
+
+//   display: flex;
+//   flex-direction: column;
+
+//   padding: var(--padding-block) var(--padding-inline);
+//   margin-left: calc(var(--padding-inline) * -1);
+//   margin-right: calc(var(--padding-inline) * -1);
+
+//   background: transparent;
+//   border-left: calc(var(--padding-inline) / 2) solid var(--color);
+//   border-radius: 0;
+// }
+
+// blockquote .source {
+//   font-weight: 500;
+//   color: var(--color);
+//   font-size: 1rem;
+// }

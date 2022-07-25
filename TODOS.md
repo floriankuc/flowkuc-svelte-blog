@@ -1,4 +1,3 @@
-- css reset
-- layout: header, footer, sections
+- layout: sections
 - routes
 - content
