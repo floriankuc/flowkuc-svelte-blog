@@ -22,6 +22,7 @@ body {
 	overflow-y: scroll;
 	background-color: $color-white;	
 	font-family: 'Source Sans Pro';
+	font-size: .95rem;
 
 	> div {
 		min-height: 100vh;
@@ -43,8 +44,11 @@ p {
 }
 
 h1 {
-	font-size: 2rem;
+	white-space: nowrap;
 	text-align: center;
+	font-weight: 900;
+	letter-spacing: 1.2rem;
+	font-size: 10vw;
 }
 
 h2 {
@@ -52,12 +56,13 @@ h2 {
 }
 
 p {
-	line-height: 1.5;
+	line-height: 1.6;
+	font-size: .95rem;
 }
 
 a {
 	color: $color-red;
-	text-decoration: none;
+	text-decoration-style: dotted;
 }
 
 ul,
@@ -92,9 +97,7 @@ button:focus:not(:focus-visible) {
 }
 
 @media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
+
 }
 
 @media (prefers-reduced-motion: reduce) {

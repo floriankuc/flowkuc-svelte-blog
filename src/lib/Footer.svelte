@@ -15,12 +15,12 @@
 <style lang="scss">
   footer {
     position: sticky;
-    bottom: 10px;
+    bottom: 20px;
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 80px;
 
     ul {
-      gap:8px;
+      gap: 20px;
     }
   }
 </style>

@@ -17,20 +17,6 @@
     flex: 1;
 		display: flex;
 		flex-direction: column;
-		width: 50%;
-		margin: 3rem auto;
-
-    @media (max-width: $mq-xl) {
-      width: 60%; 
-    }
-    @media (max-width: $mq-lg) {
-      width: 70%;
-    }
-    @media (max-width: $mq-md) {
-      width: 80%
-    }
-    @media (max-width: $mq-sm) {
-      width: 95%
-    }
+		margin: 3rem 5rem;
   }
 </style>

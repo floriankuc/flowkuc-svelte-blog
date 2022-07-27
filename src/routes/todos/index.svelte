@@ -102,7 +102,7 @@
 		font-size: 28px;
 		width: 100%;
 		padding: 0.5em 1em 0.3em 1em;
-		box-sizing: border-box;
+		/* box-sizing: border-box; */
 		background: rgba(255, 255, 255, 0.05);
 		border-radius: 8px;
 		text-align: center;

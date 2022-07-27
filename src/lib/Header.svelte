@@ -6,9 +6,9 @@
 	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">About</a></li>
-			<li class:active={$page.url.pathname === '/todos'}>
+			<!-- <li class:active={$page.url.pathname === '/todos'}>
 				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li>
+			</li> -->
 			<li class:active={$page.url.pathname === '/projects'}>
 				<a sveltekit:prefetch href="/projects">Projects</a>
 			</li>
@@ -31,6 +31,7 @@
 		position: sticky;
 		top: 0;
 		height: 50px;
+		background-color: $color-white;
 	}
 
 	nav {
@@ -58,6 +59,7 @@
 		letter-spacing: 0.1em;
 		transition: color 0.15 ease-in-out;
 		color: $color-black;
+		text-decoration: none;
 	}
 
 </style>

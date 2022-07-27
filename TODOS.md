@@ -1,3 +1,2 @@
-- layout: sections
-- routes
+- zoom in / out, media queries
 - content
