@@ -1,6 +1,9 @@
 <script lang="ts">
   import type { ProjectProps } from "src/routes/projects.svelte";
+import Link from "./Link.svelte";
   export let project: ProjectProps;
+
+  console.log(project)
 </script>
 <!-- 
 topics: string[];
@@ -15,6 +18,7 @@ web_url: string; -->
         <p>{topic}</p>
       {/each}
     </ul>
+    <a href={project.html_url} target="_blank"><Link/></a>
 </li>
 
 <style>

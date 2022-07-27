@@ -2,7 +2,7 @@
   import type { Load } from "@sveltejs/kit";
 
   export const load: Load = async ({fetch}) => {
-    const response = await fetch('https://api.github.com/users/floriankuc/repos?sort=updated')
+    const response = await fetch('https://api.github.com/users/floriankuc/repos?sort=created&direction=desc')
     const projects = await response.json()
   
     return {
@@ -16,8 +16,7 @@
     name: string;
     description: string;
     topics: string[];
-    gh_url: string;
-    web_url?: string;
+    html_url: string;
   }
 </script>
 
