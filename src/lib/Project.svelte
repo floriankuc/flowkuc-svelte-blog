@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ProjectProps } from 'src/routes/projects.svelte';
+	import type { ProjectProps } from 'src/routes/work.svelte';
 	import Link from './Link.svelte';
 	export let project: ProjectProps;
 

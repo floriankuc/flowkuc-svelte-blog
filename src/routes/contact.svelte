@@ -48,7 +48,7 @@
 <p>
 	If you'd like to get in touch, feel free to drop me a line. I am currently not looking for any new
 	opportunites in terms of permanent full-time position - I am however keen to do more open source
-	work or hear about your side projects.
+	work or hear about promising side projects.
 </p>
 
 <form on:submit={sendEmail} id="emailform">
@@ -62,7 +62,6 @@
 		error={$errors.message}
 		label={'Message'}
 	/>
-	<!-- <button type="submit">submit</button> -->
 	<Button type="submit" disabled={$isSubmitting || !$isValid}>Submit</Button>
 </form>
 

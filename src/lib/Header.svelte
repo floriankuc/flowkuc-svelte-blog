@@ -6,11 +6,8 @@
 	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">About</a></li>
-			<!-- <li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li> -->
-			<li class:active={$page.url.pathname === '/projects'}>
-				<a sveltekit:prefetch href="/projects">Projects</a>
+			<li class:active={$page.url.pathname === '/work'}>
+				<a sveltekit:prefetch href="/work">work</a>
 			</li>
 			<li class:active={$page.url.pathname === '/contact'}>
 				<a sveltekit:prefetch href="/contact">Contact</a>

@@ -1,2 +1,5 @@
 - zoom in / out, media queries
 - content
+  -threejs
+- errors next to labels (- required)
+- button, loading, submitting ,align right
