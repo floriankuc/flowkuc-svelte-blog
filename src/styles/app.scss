@@ -9,9 +9,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -20,9 +20,9 @@ body {
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	overflow-y: scroll;
-	background-color: $color-white;	
+	background-color: $color-white;
 	font-family: 'Source Sans Pro';
-	font-size: .95rem;
+	font-size: 0.95rem;
 
 	> div {
 		min-height: 100vh;
@@ -57,7 +57,8 @@ h2 {
 
 p {
 	line-height: 1.6;
-	font-size: .95rem;
+	font-size: 0.95rem;
+	letter-spacing: 1px;
 }
 
 a {
@@ -66,8 +67,8 @@ a {
 }
 
 ul,
-ol[role="list"] {
-  list-style-type: none;
+ol[role='list'] {
+	list-style-type: none;
 	display: flex;
 }
 
@@ -79,17 +80,17 @@ textarea {
 }
 
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 button:focus:not(:focus-visible) {
@@ -97,13 +98,12 @@ button:focus:not(:focus-visible) {
 }
 
 @media (min-width: 720px) {
-
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
+	html:focus-within {
+		scroll-behavior: auto;
+	}
 }
 
 pre {

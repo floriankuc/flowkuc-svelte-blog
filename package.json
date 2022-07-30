@@ -37,8 +37,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@emailjs/browser": "^3.6.2",
 		"@fontsource/fira-mono": "^4.5.0",
-		"cookie": "^0.4.1"
+		"cookie": "^0.4.1",
+		"svelte-forms-lib": "^2.0.1",
+		"yup": "^0.32.11"
 	},
 	"config": {
 		"commitizen": {

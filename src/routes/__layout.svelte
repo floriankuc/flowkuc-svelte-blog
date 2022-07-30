@@ -6,31 +6,32 @@
 
 <Header />
 <main>
-	<slot/>
+	<slot />
 </main>
-<Footer/>
+<Footer />
 
 <style lang="scss">
-  @import '../styles/variables.scss';
+	@import '../styles/variables.scss';
 
-  main {
-    flex: 1;
+	main {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		width: 50%;
 		margin: 3rem auto;
+		gap: 7rem;
 
-    @media (max-width: $mq-xl) {
-      width: 60%; 
-    }
-    @media (max-width: $mq-lg) {
-      width: 70%;
-    }
-    @media (max-width: $mq-md) {
-      width: 80%
-    }
-    @media (max-width: $mq-sm) {
-      width: 95%
-    }
-  }
+		@media (max-width: $mq-xl) {
+			width: 60%;
+		}
+		@media (max-width: $mq-lg) {
+			width: 70%;
+		}
+		@media (max-width: $mq-md) {
+			width: 80%;
+		}
+		@media (max-width: $mq-sm) {
+			width: 95%;
+		}
+	}
 </style>

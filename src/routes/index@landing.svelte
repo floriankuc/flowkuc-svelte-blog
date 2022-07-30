@@ -21,13 +21,18 @@
 </svelte:head>
 
 <div class="about">
-	<img alt="me" src="me.jpg" class="about__pic"/>
+	<img alt="me" src="me.jpg" class="about__pic" />
 	<h1 class="about__headline">Hi, I'm <span>Flo</span>rian</h1>
 	<div class="about__description">
-	
-	<p>A web dev based in Hamburg, DE.</p>
-	<p>Creating new things out of nothing and improving upon already existent systems, processes and solutions is what I love about software development. I enjoy both working independently and in a team and contributing to well-crafted and useful software with intuitive and clear user experience. I am an avid learner and always looking into new technologies that catch my attention.
-	Happily working on exciting front end and cloud related projects in the life science sector at <a href="https://www.eppendorf.com" target="_blank">Eppendorf</a>.</p>
+		<p>A web dev based in Hamburg, DE.</p>
+		<p>
+			Creating new things out of nothing and improving upon already existent systems, processes and
+			solutions is what I love about software development. I enjoy both working independently and in
+			a team and contributing to well-crafted and useful software with intuitive and clear user
+			experience. I am an avid learner and always looking into new technologies that catch my
+			attention. Happily working on exciting front end and cloud related projects in the life
+			science sector at <a href="https://www.eppendorf.com" target="_blank">Eppendorf</a>.
+		</p>
 	</div>
 	<div class="about__techs">
 		<ul>
@@ -35,10 +40,8 @@
 				<li>{t}</li>
 			{/each}
 		</ul>
-	<a href="https://stackshare.io/floriankuc/my-stack#stack" target="_blank">More on stackshare</a>
-</div>
-
-
+		<a href="https://stackshare.io/floriankuc/my-stack#stack" target="_blank">More on stackshare</a>
+	</div>
 </div>
 
 <style lang="scss">
@@ -63,7 +66,8 @@
 			grid-column: 2 / 5;
 			align-self: end;
 			justify-self: end;
-			text-shadow: -1px -1px 0 $color-white, 1px -1px 0 $color-white, -1px 1px 0 $color-white, 1px 1px 0 $color-white;
+			text-shadow: -1px -1px 0 $color-white, 1px -1px 0 $color-white, -1px 1px 0 $color-white,
+				1px 1px 0 $color-white;
 
 			span {
 				border: 1px solid black;
@@ -76,7 +80,6 @@
 			display: grid;
 		}
 
-
 		&__techs {
 			grid-row: 3 / 4;
 			grid-column: 3 / 4;
@@ -88,7 +91,7 @@
 
 			ul {
 				gap: 2rem;
-			} 
-		} 
+			}
+		}
 	}
 </style>

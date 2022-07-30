@@ -39,8 +39,7 @@
 					font-size: 0.9rem;
 					border-radius: 0.3rem;
 					padding: 0.2rem 0.5rem;
-					background-color: $color-black;
-					color: $color-white;
+					border: 1px solid $color-black;
 				}
 			}
 		}

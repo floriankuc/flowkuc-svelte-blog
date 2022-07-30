@@ -15,7 +15,7 @@
 			<li class:active={$page.url.pathname === '/contact'}>
 				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
-			<li class:active={$page.url.pathname === '/blog'}>
+			<li class:active={$page.url.pathname.includes('/blog')}>
 				<a sveltekit:prefetch href="/blog">Blog</a>
 			</li>
 		</ul>
@@ -61,5 +61,4 @@
 		color: $color-black;
 		text-decoration: none;
 	}
-
 </style>

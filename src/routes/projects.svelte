@@ -28,6 +28,7 @@
 	const l = projects.length;
 </script>
 
+<p>Component where I've worked before</p>
 <p>
 	These are some projects I have worked on outside work, sourced from my <a
 		href="https://github.com/floriankuc"
