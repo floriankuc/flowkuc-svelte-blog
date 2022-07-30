@@ -3,3 +3,6 @@
   -threejs
 - errors next to labels (- required)
 - button, loading, submitting ,align right
+- version from pkg
+- author
+- framework
