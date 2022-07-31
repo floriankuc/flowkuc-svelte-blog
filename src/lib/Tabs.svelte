@@ -41,6 +41,7 @@
 
 	.box {
 		flex-grow: 1;
+		min-height: 300px;
 	}
 	ul {
 		display: flex;

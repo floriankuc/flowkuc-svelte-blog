@@ -2,12 +2,14 @@
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import '../styles/app.scss';
+import Specs from '$lib/Specs.svelte';
 </script>
 
 <Header />
 <main>
 	<slot />
 </main>
+<Specs/>
 <Footer />
 
 <style lang="scss">

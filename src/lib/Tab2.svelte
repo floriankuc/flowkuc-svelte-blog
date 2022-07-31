@@ -1,11 +1,10 @@
 <h4>Junior Web Developer</h4>
 <p>2020 - 2022</p>
 <ul class="work__list">
-	<li>lorem</li>
-	<li>
-		lorem loremloremloremloremloremloremloremlorem lorem loremloremloremlorem
-		loremloremloremloremloremlorem lorem loremloremloremlorem
-	</li>
+	<li>Developed and maintained code for appointment booking flows</li>
+	<li>Proposed and implemented testing strategy including writing documentation</li>
+	<li>Developed UI components and responsive websites</li>
+	<li>Used technologies such as React, TypeScript, HTML, CSS</li>
 </ul>
 
 <style lang="scss">
@@ -18,3 +17,4 @@
 		}
 	}
 </style>
+

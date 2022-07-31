@@ -3,7 +3,6 @@
 	import Link from './Link.svelte';
 	export let project: ProjectProps;
 
-	console.log(project);
 </script>
 
 <li class="project">

@@ -37,7 +37,6 @@
 				'user_syQnaJg1pFkIoDz5V3il4'
 				// process.env.USER_ID
 			);
-			console.log(res);
 			handleReset();
 		} catch (err) {
 			console.log(err);
