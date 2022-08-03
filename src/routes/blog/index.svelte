@@ -4,7 +4,6 @@
 	export const load: Load = async ({ fetch }) => {
 		const posts = await fetch('/api/posts.json');
 		const allPosts = await posts.json();
-		console.log(allPosts);
 
 		return {
 			props: {
@@ -41,7 +40,6 @@ import Head from '$lib/Head.svelte';
 			</h2>
 			<p>Published {post.meta.date}</p>
 			<p>{post.meta.desc ?? ''}</p>
-
 		</li>
 	{/each}
 </ul>
