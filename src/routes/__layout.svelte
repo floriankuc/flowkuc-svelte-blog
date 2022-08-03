@@ -2,14 +2,12 @@
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import '../styles/app.scss';
-import Specs from '$lib/Specs.svelte';
 </script>
 
 <Header />
 <main>
 	<slot />
 </main>
-<Specs/>
 <Footer />
 
 <style lang="scss">
@@ -20,8 +18,8 @@ import Specs from '$lib/Specs.svelte';
 		display: flex;
 		flex-direction: column;
 		width: 50%;
-		margin: 3rem auto;
-		gap: 7rem;
+		margin: 5rem auto;
+		gap: 8rem;
 
 		@media (max-width: $mq-xl) {
 			width: 60%;

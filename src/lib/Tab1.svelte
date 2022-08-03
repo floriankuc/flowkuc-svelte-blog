@@ -12,11 +12,7 @@
 		padding: 1rem;
 
 		li {
-			list-style-image: url('./chevron.svg');
+			list-style-image: url('../assets/chevron.svg');
 		}
 	}
 </style>
-<!-- //Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery -->
-<!-- Test documentation -->
-<!-- Proposed and implemented  -->
-<!-- Engineered and maintained major features of Starry's customer-facing web app using ES6, Handlebars, Backbone, Marionette  -->

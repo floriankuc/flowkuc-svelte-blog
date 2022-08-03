@@ -1,12 +1,10 @@
 <script lang="ts">
-	// your script goes here
 </script>
 
 <button class="button" {...$$props}>
 	<slot />
 </button>
 
-<!-- markup (zero or more items) goes here -->
 <style lang="scss">
 	@import '../styles/variables.scss';
 	.button {
@@ -15,8 +13,8 @@
 		padding: 0 1.5rem;
 		border: none;
 		border-radius: 0.7rem;
-		color: white;
-		background-color: black;
+		color: $color-white;
+		background-color: $color-black;
 
 		&:enabled:hover {
 			cursor: pointer;

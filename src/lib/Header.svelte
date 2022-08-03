@@ -9,11 +9,11 @@
 			<li class:active={$page.url.pathname === '/work'}>
 				<a sveltekit:prefetch href="/work">work</a>
 			</li>
-			<li class:active={$page.url.pathname === '/contact'}>
-				<a sveltekit:prefetch href="/contact">Contact</a>
-			</li>
 			<li class:active={$page.url.pathname.includes('/blog')}>
 				<a sveltekit:prefetch href="/blog">Blog</a>
+			</li>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
 		</ul>
 	</nav>
@@ -22,9 +22,16 @@
 <style lang="scss">
 	@import '../styles/variables.scss';
 
+	.intl-switch{
+		position: absolute;
+		right: 1rem;
+		font-weight: 300;
+		font-size: .9rem;
+	}
 	header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		position: sticky;
 		top: 0;
 		height: 50px;
@@ -45,16 +52,17 @@
 		color: $color-red;
 	}
 
+	span.active {
+		color: $color-red;
+	}
+
 	nav a {
 		display: flex;
-		height: 100%;
-		align-items: center;
 		padding: 0 1em;
 		font-weight: 400;
 		font-size: 0.9rem;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		transition: color 0.15 ease-in-out;
+		letter-spacing: 0.1rem;
 		color: $color-black;
 		text-decoration: none;
 	}

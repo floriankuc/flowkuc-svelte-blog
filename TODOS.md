@@ -1,8 +1,8 @@
-- zoom in / out, media queries
-- content
-  -threejs
+- refactor/simplify
 - errors next to labels (- required)
-- button, loading, submitting ,align right
-- version from pkg
-- author
-- framework
+- button, loading, submitting
+- posts
+
+- zoom in / out, media queries
+
+- threejs

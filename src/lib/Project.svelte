@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ProjectProps } from 'src/routes/work.svelte';
-	import Link from './Link.svelte';
+	import Link from './icons/Link.svelte';
 	export let project: ProjectProps;
 
 </script>
@@ -35,7 +35,6 @@
 				gap: 1rem;
 
 				li {
-					font-size: 0.9rem;
 					border-radius: 0.3rem;
 					padding: 0.2rem 0.5rem;
 					border: 1px solid $color-black;

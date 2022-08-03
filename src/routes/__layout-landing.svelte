@@ -17,6 +17,8 @@
     flex: 1;
 		display: flex;
 		flex-direction: column;
-		margin: 3rem 5rem;
+		margin: 5rem;
+		justify-content: center;
+		align-items: center;
   }
 </style>

@@ -1,9 +1,12 @@
 @import '@fontsource/fira-mono';
 @import './fonts.scss';
 @import './variables.scss';
+@import './prism-xonokai.css';
 
 :root {
-	font-family: 'Source Sans Pro', $font-fallback;
+	font-family: 'Roboto Condensed', $font-fallback;
+	font-size: 1rem;
+
 }
 
 *,
@@ -21,8 +24,8 @@ body {
 	line-height: 1.5;
 	overflow-y: scroll;
 	background-color: $color-white;
-	font-family: 'Source Sans Pro';
-	font-size: 0.95rem;
+	font-family: 'Roboto Condensed';
+	font-size: 1rem;
 
 	> div {
 		min-height: 100vh;
@@ -37,18 +40,11 @@ body {
 	flex-direction: column;
 }
 
-h1,
-h2,
-p {
-	font-weight: 400;
-}
-
 h1 {
 	white-space: nowrap;
 	text-align: center;
 	font-weight: 900;
-	letter-spacing: 1.2rem;
-	font-size: 10vw;
+	font-size: 16rem;
 }
 
 h2 {
@@ -56,9 +52,10 @@ h2 {
 }
 
 p {
-	line-height: 1.6;
-	font-size: 0.95rem;
-	letter-spacing: 1px;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 300;
+
 }
 
 a {
@@ -70,6 +67,7 @@ ul,
 ol[role='list'] {
 	list-style-type: none;
 	display: flex;
+	font-weight: 300;
 }
 
 input,
@@ -105,37 +103,3 @@ button:focus:not(:focus-visible) {
 		scroll-behavior: auto;
 	}
 }
-
-pre {
-	font-size: 16px;
-	font-family: $font-mono;
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-}
-
-// blockquote {
-//   font-size: 1.5rem;
-//   --padding-block: 1rem;
-//   --padding-inline: 1.25rem;
-//   --color: var(--theme-divider);
-
-//   display: flex;
-//   flex-direction: column;
-
-//   padding: var(--padding-block) var(--padding-inline);
-//   margin-left: calc(var(--padding-inline) * -1);
-//   margin-right: calc(var(--padding-inline) * -1);
-
-//   background: transparent;
-//   border-left: calc(var(--padding-inline) / 2) solid var(--color);
-//   border-radius: 0;
-// }
-
-// blockquote .source {
-//   font-weight: 500;
-//   color: var(--color);
-//   font-size: 1rem;
-// }

@@ -8,13 +8,15 @@
 </script>
 
 <!-- &&props usen, disabled setzen für submitting -->
+<!-- <svelte:component this={item.component} /> -->
+
 
 <div class="field">
 	<label for={name}>{label}</label>
 	{#if type === 'input'}
 		<input class="field--input" id={name} {name} on:change={handleChange} bind:value />
 	{:else}
-		<textarea class="field--textarea" id={name} {name} on:change={handleChange} bind:value />
+		<textarea class="field--textarea" id={name} {name} on:change={handleChange} bind:value 	 />
 	{/if}
 
 	{#if error}
@@ -22,11 +24,9 @@
 	{/if}
 </div>
 
-<!-- markup (zero or more items) goes here -->
 <style lang="scss">
 	@import '../styles/variables.scss';
 	.field {
-		/* background-color: lavenderblush; */
 		display: flex;
 		flex-direction: column;
 		gap: 0.7rem;
@@ -40,7 +40,6 @@
 
 			&:focus,
 			&:active {
-				/* outline: 1px solid $color-grey-dark; */
 				background-color: $color-grey-light-mid;
 			}
 		}
@@ -53,5 +52,4 @@
 			color: #ff0000;
 		}
 	}
-	/* your styles go here */
 </style>

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { createForm } from 'svelte-forms-lib';
-	import * as yup from 'yup';
 	import emailjs from '@emailjs/browser';
 	import Input from '../lib/Input.svelte';
 	import Button from '../lib/Button.svelte';
+	import Head from '$lib/Head.svelte';
+	import { validationSchema } from '../helpers/validationSchema';
 
 	const { form, errors, handleChange, handleReset, isValid, isSubmitting, touched } = createForm({
 		initialValues: {
@@ -11,22 +12,16 @@
 			email: '',
 			message: ''
 		},
-		validationSchema: yup.object().shape({
-			name: yup.string().required('Name is required.'),
-			email: yup.string().email('Email is invalid').required('Email is required.'),
-			message: yup
-				.string()
-				.required('Message is required')
-				.min(5, 'Message should probably longer. :-)')
-		}),
-		onSubmit: sendEmail
+		validationSchema,
+		onSubmit: sendEmail,
 	});
 
-	async function sendEmail(e) {
+	// FIX: emailjs cannot type this event correctly
+	async function sendEmail(e: any) {
 		e.preventDefault();
 
 		try {
-			const res = await emailjs.sendForm(
+			await emailjs.sendForm(
 				// process.env.SERVICE_ID,
 				// process.env.VITE_SERVICE_ID as string,
 				'service_7jrq2gv',
@@ -44,6 +39,7 @@
 	}
 </script>
 
+<Head title="Contact"/>
 <p>
 	If you'd like to get in touch, feel free to drop me a line. I am currently not looking for any new
 	opportunites in terms of permanent full-time position - I am however keen to do more open source
@@ -51,7 +47,7 @@
 </p>
 
 <form on:submit={sendEmail} id="emailform">
-	<Input name="name" {handleChange} value={$form.name} error={$errors.name} label={'Name'} />
+	<Input name="name" {handleChange} value={$form.name} error={$errors.name} label={'Name'}/>
 	<Input name="email" {handleChange} value={$form.email} error={$errors.email} label={'Email'} />
 	<Input
 		type="textarea"
@@ -61,7 +57,7 @@
 		error={$errors.message}
 		label={'Message'}
 	/>
-	<Button type="submit" disabled={$isSubmitting || !$isValid}>Submit</Button>
+	<Button type="submit" disabled={$isSubmitting || !$isValid || !$touched}>Submit</Button>
 </form>
 
 <style lang="scss">
@@ -69,5 +65,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
+
+		& :global(.button) {
+			align-self: flex-end;
+		}
 	}
 </style>
