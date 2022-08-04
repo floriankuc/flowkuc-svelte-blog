@@ -10,7 +10,7 @@
 		<li><a href="https://github.com/floriankuc/" target="_blank"><Github /></a></li>
 		<li><a href="https://www.linkedin.com/in/floriankuc/" target="_blank"><LinkedIn /></a></li>
 		<li><a href="https://www.xing.com/profile/Florian_Kuc/" target="_blank"><Xing /></a></li>
-	</ul> 
+	</ul>
 	<Specs />
 </footer>
 
@@ -20,7 +20,7 @@
 		bottom: 0;
 		display: flex;
 		align-items: flex-end;
-		padding: 0 2rem .7rem;
+		padding: 0 2rem 0.7rem;
 		height: 70px;
 		justify-content: space-between;
 

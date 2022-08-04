@@ -14,23 +14,15 @@
 </script>
 
 <script lang="ts">
-import Head from '$lib/Head.svelte';
-
-	interface Post {
-		meta: {
-			title: string;
-			date: string;
-			desc: string;
-		};
-		path: string;
-	}
+	import Head from '$lib/Head.svelte';
+	import type { Post } from 'src/types';
 
 	export let posts: Post[];
 </script>
 
-<Head title="Blog"/>
+<Head title="Blog" />
 
-<ul class="blog-list">
+<ul>
 	{#each posts as post}
 		<li>
 			<h2>
@@ -45,9 +37,8 @@ import Head from '$lib/Head.svelte';
 </ul>
 
 <style lang="scss">
-
 	@import '../../styles/variables.scss';
-	.blog-list {
+	ul {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -62,6 +53,5 @@ import Head from '$lib/Head.svelte';
 				font-weight: 400;
 			}
 		}
-		
 	}
 </style>

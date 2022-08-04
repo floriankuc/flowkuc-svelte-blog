@@ -1,13 +1,13 @@
 <script lang="ts">
 </script>
 
-<button class="button" {...$$props}>
+<button {...$$props}>
 	<slot />
 </button>
 
 <style lang="scss">
 	@import '../styles/variables.scss';
-	.button {
+	button {
 		height: 3rem;
 		width: fit-content;
 		padding: 0 1.5rem;

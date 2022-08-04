@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { ProjectProps } from 'src/routes/work.svelte';
-	import Link from './icons/Link.svelte';
-	export let project: ProjectProps;
+	import type { Project } from 'src/types';
 
+	import Link from './icons/Link.svelte';
+	export let project: Project;
 </script>
 
-<li class="project">
+<li>
 	<div>
 		<h3>{project.name.split(/[-_]/g).join(' ')}</h3>
 		<p>{project.description}</p>
@@ -20,7 +20,7 @@
 
 <style lang="scss">
 	@import '../styles/variables.scss';
-	.project {
+	li {
 		display: flex;
 		background-color: $color-grey-light-mid;
 		border-radius: 1rem;

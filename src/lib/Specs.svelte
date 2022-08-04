@@ -1,50 +1,47 @@
-<script  lang="ts">
-  import { onMount } from 'svelte';
+<script lang="ts">
+	import type { Repo } from 'src/types';
 
-  export let repoo: Repo;
-  export let tagversion: string;
-  let tag: any
-  let date: string;
+	import { onMount } from 'svelte';
 
-  onMount(async () => {
-    const getRepo = async () => {
-      const res = await fetch('https://api.github.com/repos/floriankuc/flowkuc-svelte-blog')
-      return await res.json()
-    }
+	export let repo: Repo;
+	let tag: any;
+	let date: string;
 
-    const getTags = async () => {
-      const res = await fetch('https://api.github.com/repos/floriankuc/flowkuc-svelte-blog/tags')
-      return await res.json()
-    }
-    
-    [repoo, tag] = await Promise.all([getRepo(), getTags()])
+	onMount(async () => {
+		const getRepo = async () => {
+			const res = await fetch('https://api.github.com/repos/floriankuc/flowkuc-svelte-blog');
+			return await res.json();
+		};
 
-    tagversion = tag[0].name
-    date = new Date(repoo.pushed_at).toLocaleDateString('en')
-  });
+		const getTags = async () => {
+			const res = await fetch('https://api.github.com/repos/floriankuc/flowkuc-svelte-blog/tags');
+			return await res.json();
+		};
 
-  interface Repo {
-    updated_at: string;
-    pushed_at: string;
-  }
+		[repo, tag] = await Promise.all([getRepo(), getTags()]);
+
+		tag = tag[0].name;
+		date = new Date(repo.pushed_at).toLocaleDateString('en');
+	});
 </script>
 
-<ul class="site-specs">
-  <li>{tagversion || 'v'}</li>
-  <li>Sveltekit</li>
-  <li>{ date || ''}</li>
+<ul>
+	<li>{tag ?? 'v'}</li>
+	<li>Sveltekit</li>
+	<li>{date || ''}</li>
 </ul>
 
-
 <style lang="scss">
-  .site-specs {
-    position: sticky;
-    flex-direction: column;
-    text-align: right;
+	ul {
+		position: sticky;
+		flex-direction: column;
+		text-align: right;
+		line-height: 1;
+		font-size: 0.9rem;
+		align-self: center;
 
-    li {
-       text-transform: uppercase;
-      font-weight: 300;
-    }
-  }
+		li {
+			text-transform: uppercase;
+		}
+	}
 </style>

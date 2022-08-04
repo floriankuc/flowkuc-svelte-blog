@@ -22,12 +22,6 @@
 <style lang="scss">
 	@import '../styles/variables.scss';
 
-	.intl-switch{
-		position: absolute;
-		right: 1rem;
-		font-weight: 300;
-		font-size: .9rem;
-	}
 	header {
 		display: flex;
 		justify-content: space-between;

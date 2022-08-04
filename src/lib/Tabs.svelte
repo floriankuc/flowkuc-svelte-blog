@@ -5,32 +5,32 @@
 	const handleClick = (tabValue: number) => () => (activeTabValue = tabValue);
 </script>
 
-<div class="tabs">
-	<ul class="tabs__panels">
+<section>
+	<ul>
 		{#each items as item}
-			<li class={activeTabValue === item.value ? 'active' : ''}>
+			<li class:active={activeTabValue === item.value}>
 				<span on:click={handleClick(item.value)}>{item.label}</span>
 			</li>
 		{/each}
 	</ul>
 	{#each items as item}
 		{#if activeTabValue == item.value}
-			<div class="box">
+			<div>
 				<svelte:component this={item.component} />
 			</div>
 		{/if}
 	{/each}
-</div>
+</section>
 
 <style lang="scss">
 	@import '../styles/variables.scss';
 
-	.tabs {
+	section {
 		display: flex;
 		gap: 4rem;
 	}
 
-	.tabs__panels {
+	ul {
 		flex-direction: column;
 
 		li {
@@ -39,7 +39,7 @@
 		}
 	}
 
-	.box {
+	div {
 		flex-grow: 1;
 		height: 150px;
 	}

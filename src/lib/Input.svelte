@@ -7,32 +7,28 @@
 	export let type: 'input' | 'textarea' = 'input';
 </script>
 
-<!-- &&props usen, disabled setzen für submitting -->
-<!-- <svelte:component this={item.component} /> -->
-
-
-<div class="field">
+<div>
 	<label for={name}>{label}</label>
 	{#if type === 'input'}
-		<input class="field--input" id={name} {name} on:change={handleChange} bind:value />
+		<input id={name} {name} on:change={handleChange} bind:value />
 	{:else}
-		<textarea class="field--textarea" id={name} {name} on:change={handleChange} bind:value 	 />
+		<textarea id={name} {name} on:change={handleChange} bind:value />
 	{/if}
 
 	{#if error}
-		<small class="field__error">{error}</small>
+		<small>{error}</small>
 	{/if}
 </div>
 
 <style lang="scss">
 	@import '../styles/variables.scss';
-	.field {
+	div {
 		display: flex;
 		flex-direction: column;
 		gap: 0.7rem;
 
-		&--textarea,
-		&--input {
+		textarea,
+		input {
 			outline: none;
 			padding: 0.6rem 1rem;
 			border-radius: 0.8rem;
@@ -44,12 +40,12 @@
 			}
 		}
 
-		&--textarea {
+		textarea {
 			resize: none;
 		}
 
-		&__error {
-			color: #ff0000;
+		small {
+			color: $color-red;
 		}
 	}
 </style>
