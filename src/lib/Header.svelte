@@ -29,6 +29,7 @@
 		position: sticky;
 		top: 0;
 		height: 50px;
+		z-index: 1;
 		background-color: $color-white;
 	}
 
@@ -38,15 +39,7 @@
 		width: 100%;
 	}
 
-	ul {
-		position: relative;
-	}
-
 	.active a {
-		color: $color-red;
-	}
-
-	span.active {
 		color: $color-red;
 	}
 

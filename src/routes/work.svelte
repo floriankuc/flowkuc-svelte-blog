@@ -38,18 +38,15 @@
 
 <Head title="Work" />
 <Tabs {items} />
-
-<div>
-	<p>
-		I've been building websites and apps mainly with <span>{techString}</span>. All technologies
-		I've ever worked with can be found on my
-		<a href="https://stackshare.io/floriankuc/my-stack#stack" target="_blank">stackshare</a>. Below
-		are some projects I have worked on outside work, sourced from my
-		<a href="https://github.com/floriankuc" target="_blank"> Github profile </a>
-		and generally work in progress. Some on the verge of completion, others I may have abandoned entirely
-		in the light of something more captivating. 😇
-	</p>
-</div>
+<p>
+	I've been building websites and apps mainly with <span>{techString}</span>. All technologies I've
+	ever worked with can be found on my
+	<a href="https://stackshare.io/floriankuc/my-stack#stack" target="_blank">stackshare</a>. Below
+	are some projects I have worked on outside work, sourced from my
+	<a href="https://github.com/floriankuc" target="_blank"> Github profile </a>
+	and generally work in progress. Some on the verge of completion, others I may have abandoned entirely
+	in the light of something more captivating. 😇
+</p>
 
 <ul>
 	{#each projects as p}
@@ -60,8 +57,6 @@
 <style lang="scss">
 	ul {
 		flex-direction: column;
-
-		font-weight: 300;
 		gap: 3rem;
 		padding: 1rem;
 	}

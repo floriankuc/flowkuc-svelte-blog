@@ -21,7 +21,6 @@
 </script>
 
 <Head title="Blog" />
-
 <ul>
 	{#each posts as post}
 		<li>
@@ -30,7 +29,7 @@
 					{post.meta.title}
 				</a>
 			</h2>
-			<p>Published {post.meta.date}</p>
+			<p>{new Date(post.meta.date).toLocaleDateString()}</p>
 			<p>{post.meta.desc ?? ''}</p>
 		</li>
 	{/each}
@@ -51,6 +50,14 @@
 			a {
 				font-size: 1.5rem;
 				font-weight: 400;
+			}
+
+			p:first-of-type {
+				font-size: 0.9rem;
+			}
+
+			p:last-of-type {
+				margin-top: 1rem;
 			}
 		}
 	}

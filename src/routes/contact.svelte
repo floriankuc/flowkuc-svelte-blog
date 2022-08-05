@@ -13,7 +13,7 @@
 			message: ''
 		},
 		validationSchema,
-		onSubmit: sendEmail,
+		onSubmit: sendEmail
 	});
 
 	// FIX: emailjs cannot type this event correctly
@@ -39,7 +39,7 @@
 	}
 </script>
 
-<Head title="Contact"/>
+<Head title="Contact" />
 <p>
 	If you'd like to get in touch, feel free to drop me a line. I am currently not looking for any new
 	opportunites in terms of permanent full-time position - I am however keen to do more open source
@@ -47,7 +47,7 @@
 </p>
 
 <form on:submit={sendEmail} id="emailform">
-	<Input name="name" {handleChange} value={$form.name} error={$errors.name} label={'Name'}/>
+	<Input name="name" {handleChange} value={$form.name} error={$errors.name} label={'Name'} />
 	<Input name="email" {handleChange} value={$form.email} error={$errors.email} label={'Email'} />
 	<Input
 		type="textarea"
@@ -66,7 +66,7 @@
 		flex-direction: column;
 		gap: 2rem;
 
-		& :global(.button) {
+		& :global(button) {
 			align-self: flex-end;
 		}
 	}

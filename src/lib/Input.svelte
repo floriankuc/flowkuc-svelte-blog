@@ -27,23 +27,6 @@
 		flex-direction: column;
 		gap: 0.7rem;
 
-		textarea,
-		input {
-			outline: none;
-			padding: 0.6rem 1rem;
-			border-radius: 0.8rem;
-			border: 1px solid $color-grey-dark;
-
-			&:focus,
-			&:active {
-				background-color: $color-grey-light-mid;
-			}
-		}
-
-		textarea {
-			resize: none;
-		}
-
 		small {
 			color: $color-red;
 		}

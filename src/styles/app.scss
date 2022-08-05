@@ -6,7 +6,6 @@
 :root {
 	font-family: 'Roboto Condensed', $font-fallback;
 	font-size: 1rem;
-
 }
 
 *,
@@ -47,15 +46,10 @@ h1 {
 	font-size: 16rem;
 }
 
-h2 {
-	font-size: 1rem;
-}
-
 p {
 	font-size: 1rem;
 	line-height: 1.5;
 	font-weight: 300;
-
 }
 
 a {
@@ -75,6 +69,41 @@ button,
 textarea {
 	font-size: inherit;
 	font-family: inherit;
+}
+
+textarea,
+input {
+	outline: none;
+	padding: 0.6rem 1rem;
+	border-radius: 0.8rem;
+	border: 1px solid $color-grey-dark;
+
+	&:focus,
+	&:active {
+		background-color: $color-grey-light-mid;
+	}
+}
+
+textarea {
+	resize: none;
+}
+
+button {
+	height: 3rem;
+	width: fit-content;
+	padding: 0 1.5rem;
+	border: none;
+	border-radius: 0.7rem;
+	color: $color-white;
+	background-color: $color-black;
+
+	&:enabled:hover {
+		cursor: pointer;
+	}
+	&:disabled {
+		background-color: $color-grey-mid;
+		color: $color-grey-dark;
+	}
 }
 
 html:focus-within {
