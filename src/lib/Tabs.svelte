@@ -1,11 +1,11 @@
 <script lang="ts">
 	export let items: { value: number; label: string; component: any }[] = [];
 	export let activeTabValue = 1;
-
+	import { fly } from 'svelte/transition';
 	const handleClick = (tabValue: number) => () => (activeTabValue = tabValue);
 </script>
 
-<section>
+<section in:fly={{ x: -10 }}>
 	<ul>
 		{#each items as item}
 			<li class:active={activeTabValue === item.value}>
@@ -14,11 +14,13 @@
 		{/each}
 	</ul>
 	{#each items as item}
-		{#if activeTabValue == item.value}
-			<div>
-				<svelte:component this={item.component} />
-			</div>
-		{/if}
+		{#key item}
+			{#if activeTabValue == item.value}
+				<div in:fly={{ x: -10 }}>
+					<svelte:component this={item.component} />
+				</div>
+			{/if}
+		{/key}
 	{/each}
 </section>
 
@@ -28,6 +30,10 @@
 	section {
 		display: flex;
 		gap: 4rem;
+
+		@media (max-width: $mq-sm) {
+			gap: 1rem;
+		}
 	}
 
 	ul {
@@ -42,6 +48,10 @@
 	div {
 		flex-grow: 1;
 		height: 150px;
+
+		@media (max-width: $mq-sm) {
+			height: 270px;
+		}
 	}
 	ul {
 		display: flex;

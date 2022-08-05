@@ -5,7 +5,7 @@
 	import Button from '../lib/Button.svelte';
 	import Head from '$lib/Head.svelte';
 	import { validationSchema } from '../helpers/validationSchema';
-
+	import { fly } from 'svelte/transition';
 	const { form, errors, handleChange, handleReset, isValid, isSubmitting, touched } = createForm({
 		initialValues: {
 			name: '',
@@ -40,13 +40,13 @@
 </script>
 
 <Head title="Contact" />
-<p>
+<p in:fly={{ x: -10 }}>
 	If you'd like to get in touch, feel free to drop me a line. I am currently not looking for any new
 	opportunites in terms of permanent full-time position - I am however keen to do more open source
 	work or hear about promising side projects.
 </p>
 
-<form on:submit={sendEmail} id="emailform">
+<form on:submit={sendEmail} id="emailform" in:fly={{ x: -10, delay: 100 }}>
 	<Input name="name" {handleChange} value={$form.name} error={$errors.name} label={'Name'} />
 	<Input name="email" {handleChange} value={$form.email} error={$errors.email} label={'Email'} />
 	<Input

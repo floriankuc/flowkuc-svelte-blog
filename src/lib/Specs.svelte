@@ -32,6 +32,7 @@
 </ul>
 
 <style lang="scss">
+	@import '../styles/variables.scss';
 	ul {
 		position: sticky;
 		flex-direction: column;
@@ -42,6 +43,10 @@
 
 		li {
 			text-transform: uppercase;
+		}
+
+		@media (max-width: $mq-lg) {
+			display: none;
 		}
 	}
 </style>

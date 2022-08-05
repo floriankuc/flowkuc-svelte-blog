@@ -15,6 +15,7 @@
 </footer>
 
 <style lang="scss">
+	@import '../styles/variables.scss';
 	footer {
 		position: sticky;
 		bottom: 0;
@@ -26,6 +27,13 @@
 
 		ul {
 			gap: 20px;
+		}
+
+		@media (max-width: $mq-lg) {
+			padding-bottom: 0;
+			justify-content: center;
+			height: 40px;
+			background: $color-white;
 		}
 	}
 </style>

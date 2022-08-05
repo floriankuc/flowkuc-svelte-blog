@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
-
+	import { fly } from 'svelte/transition';
 	export const load: Load = async ({ fetch }) => {
 		const response = await fetch(
 			'https://api.github.com/users/floriankuc/repos?sort=created&direction=desc'
@@ -25,6 +25,7 @@
 	import Bookingtime from '$lib/employers/Bookingtime.svelte';
 	import Business from '$lib/employers/Business.svelte';
 	import type { Project as ProjectProps } from 'src/types';
+	import { slide } from 'svelte/transition';
 
 	export let projects: ProjectProps[];
 	let items = [
@@ -38,7 +39,7 @@
 
 <Head title="Work" />
 <Tabs {items} />
-<p>
+<p in:fly={{ x: -10, delay: 100 }}>
 	I've been building websites and apps mainly with <span>{techString}</span>. All technologies I've
 	ever worked with can be found on my
 	<a href="https://stackshare.io/floriankuc/my-stack#stack" target="_blank">stackshare</a>. Below
@@ -48,7 +49,7 @@
 	in the light of something more captivating. 😇
 </p>
 
-<ul>
+<ul in:fly={{ x: -10, delay: 200 }}>
 	{#each projects as p}
 		<Project project={p} />
 	{/each}

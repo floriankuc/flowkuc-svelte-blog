@@ -1,7 +1,7 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
 	import Head from '$lib/Head.svelte';
-	import { techs } from '../data';
+	import { fly } from 'svelte/transition';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -19,12 +19,12 @@
 <Head title="About" />
 
 <section>
-	<img alt="me" src="me.jpg" />
+	<img alt="me" src="me.jpg" in:fly={{ x: -10 }} />
 	<div>
-		<h1>Hi</h1>
-		<h1>I am</h1>
-		<h1>Flo</h1>
-		<p>
+		<h1 in:fly={{ x: -10, delay: 100 }}>Hi</h1>
+		<h1 in:fly={{ x: -10, delay: 150 }}>I am</h1>
+		<h1 in:fly={{ x: -10, delay: 200 }}>Flo</h1>
+		<p in:fly={{ x: -10, delay: 300 }}>
 			A web dev based in Hamburg, DE. Creating new things out of nothing and improving upon already
 			existent systems, processes and solutions is what I love about software development. I enjoy
 			both working independently and in a team and contributing to well-crafted and useful software
@@ -44,10 +44,27 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 4rem;
+
+		@media (max-width: $mq-xl) {
+			flex-direction: column;
+		}
+
 		img {
 			border-radius: 1rem;
 			width: 700px;
 			align-self: flex-start;
+
+			@media (max-width: $mq-xxxl) {
+				width: 500px;
+			}
+
+			@media (max-width: $mq-xxxl) {
+				width: 400px;
+			}
+
+			@media (max-width: $mq-sm) {
+				width: 100%;
+			}
 		}
 
 		h1 {
@@ -59,6 +76,10 @@
 			margin-top: 3rem;
 			line-height: 1.1;
 			width: 600px;
+
+			@media (max-width: $mq-sm) {
+				width: 100%;
+			}
 		}
 	}
 </style>

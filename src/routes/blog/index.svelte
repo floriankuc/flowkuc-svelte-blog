@@ -16,12 +16,13 @@
 <script lang="ts">
 	import Head from '$lib/Head.svelte';
 	import type { Post } from 'src/types';
+	import { fly } from 'svelte/transition';
 
 	export let posts: Post[];
 </script>
 
 <Head title="Blog" />
-<ul>
+<ul in:fly={{ x: -10 }}>
 	{#each posts as post}
 		<li>
 			<h2>

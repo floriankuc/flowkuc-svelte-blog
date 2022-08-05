@@ -32,6 +32,8 @@
 		}
 		@media (max-width: $mq-sm) {
 			width: 95%;
+			gap: 3rem;
+			margin: 3rem auto;
 		}
 	}
 </style>

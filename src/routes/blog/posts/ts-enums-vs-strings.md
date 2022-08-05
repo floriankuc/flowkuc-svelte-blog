@@ -1,6 +1,6 @@
 ---
 title: 'Enums vs. strings in Typescript'
-date: '2021-12-10'
+date: '2022-08-05'
 desc: 'Enums provide readability and maintainability and are as such tempting to sometimes utilise in a possibly disproportionate fashion. A few pros and cons.'
 ---
 
@@ -15,9 +15,7 @@ enum Direction {
 }
 ```
 
-Enums provide readability and maintainability. But maybe they could be a bit too tempting to be utilised in a possibly disproportionate manner.
-
-Correctly named a string enum will immediately convey its meaning as the concept of the collection of values it resembles, nicely encapsulated. The type safety is fantastic.
+Enums provide readability and maintainability. Correctly named a string enum will immediately convey its meaning as the concept of the collection of values it resembles, nicely encapsulated.
 
 Working with string enum types can sometimes be irritating however. They require intellisense or lookups to properly identify their corresponding string values and even then - the name of their identifier will probably give the actual value away 90 % of the time anyway.
 
@@ -30,13 +28,13 @@ moveInDirection('UP');
 // Type '"UP"' is not assignable to type 'Direction'
 ```
 
-Just looking at this call I may have expected this function signature:
+Just looking at this call you may have expected this kind of function signature:
 
 ```jsx
 const moveInDirection = (direction: string): void => console.log(`Moving ${direction}.`);
 ```
 
-It's probably this one instead though, the argument being typed as `Direction` type, not string:
+It's this one instead though, the argument being typed as `Direction` type, not string:
 
 ```jsx
 const moveInDirection = (direction: Direction): void => console.log(`Moving ${direction}.`);
@@ -50,7 +48,7 @@ import { Direction } from './directionTypes';
 moveInDirection(Direction.Up);
 ```
 
-I will always require the import and the dependency it creates. If the identifier's name is equal to its value the readability of the function call will hardly suffer but the code will become (unnecessarily?) verbose. I will also have to ensure the enum is being exported correctly.
+Working with this enum, you will always require the import and the dependency it creates. If the identifier's name is equal to its value the readability of the function call will hardly suffer but the code will become unnecessarily verbose. Verbose is a strong word for one added line but it that'll accumulate within a medium-sized app. You will also have to ensure the enum is being exported correctly.
 
 Additionally it might be worthwhile to take the compiled Javascript into consideration. The above-mentioned `Direction` enum compiles to ([TS Playground](https://www.typescriptlang.org/play)):
 
@@ -64,7 +62,7 @@ var Direction;
 })(Direction || (Direction = {}));
 ```
 
-That shouldn't make a difference unless a large project is cluttered with enums beyond reason but it leaves room for optimising our code base.
+Not that much either but again, it adds up.
 
 The counterproposal to using a string enum is to use a union of string types.
 

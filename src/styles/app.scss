@@ -44,6 +44,14 @@ h1 {
 	text-align: center;
 	font-weight: 900;
 	font-size: 16rem;
+
+	@media (max-width: $mq-xxxl) {
+		font-size: 11rem;
+	}
+
+	@media (max-width: $mq-xxl) {
+		font-size: 9rem;
+	}
 }
 
 p {
@@ -97,8 +105,13 @@ button {
 	color: $color-white;
 	background-color: $color-black;
 
+	@media (max-width: $mq-sm) {
+		width: 100%;
+	}
+
 	&:enabled:hover {
 		cursor: pointer;
+		color: $color-red;
 	}
 	&:disabled {
 		background-color: $color-grey-mid;
@@ -122,9 +135,6 @@ picture {
 
 button:focus:not(:focus-visible) {
 	outline: none;
-}
-
-@media (min-width: 720px) {
 }
 
 @media (prefers-reduced-motion: reduce) {

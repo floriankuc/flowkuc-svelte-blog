@@ -6,19 +6,23 @@
 
 <Header />
 <main>
-	<slot/>
+	<slot />
 </main>
-<Footer/>
+<Footer />
 
 <style lang="scss">
-  @import '../styles/variables.scss';
+	@import '../styles/variables.scss';
 
-  main {
-    flex: 1;
+	main {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		margin: 5rem;
 		justify-content: center;
 		align-items: center;
-  }
+
+		@media (max-width: $mq-sm) {
+			margin: 3rem 1rem;
+		}
+	}
 </style>
