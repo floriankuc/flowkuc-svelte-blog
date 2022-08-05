@@ -22,15 +22,10 @@
 
 		try {
 			await emailjs.sendForm(
-				// process.env.SERVICE_ID,
-				// process.env.VITE_SERVICE_ID as string,
-				'service_7jrq2gv',
-				'template_owkbegn',
-				// process.env.VITE_TEMPLATE_ID,
+				import.meta.env.VITE_SERVICE_ID,
+				import.meta.env.VITE_TEMPLATE_ID,
 				'#emailform',
-				// process.env.VITE_USER_ID
-				'user_syQnaJg1pFkIoDz5V3il4'
-				// process.env.USER_ID
+				import.meta.env.VITE_USER_ID
 			);
 			handleReset();
 		} catch (err) {
