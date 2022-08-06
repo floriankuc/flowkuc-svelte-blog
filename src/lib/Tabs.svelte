@@ -50,7 +50,7 @@
 		height: 150px;
 
 		@media (max-width: $mq-sm) {
-			height: 270px;
+			height: 380px;
 		}
 	}
 	ul {
