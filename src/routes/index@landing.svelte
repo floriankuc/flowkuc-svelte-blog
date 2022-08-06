@@ -19,7 +19,7 @@
 <Head title="About" />
 
 <section>
-	<img alt="me" src="me.jpg" in:fly={{ x: -10 }} />
+	<img alt="me" src="/images/me.jpg" in:fly={{ x: -10 }} />
 	<div>
 		<h1 in:fly={{ x: -10, delay: 100 }}>Hi</h1>
 		<h1 in:fly={{ x: -10, delay: 150 }}>I am</h1>

@@ -17,7 +17,7 @@
 		padding: 1rem;
 
 		li {
-			list-style-image: url('chevron.svg');
+			list-style-image: url('/images/chevron.svg');
 		}
 	}
 </style>
