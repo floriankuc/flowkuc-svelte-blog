@@ -1,5 +1,4 @@
-- button, loading, submitting
-- env vars
-- deploy
+- invalidate form on start
+- deploy vercel
 
 - threejs

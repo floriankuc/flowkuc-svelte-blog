@@ -24,3 +24,10 @@ interface Post {
 	};
 	path: string;
 }
+
+type ToastType = 'default' | 'error';
+
+interface Toast {
+	message?: string;
+	type?: ToastType;
+}

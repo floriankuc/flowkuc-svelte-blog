@@ -6,6 +6,9 @@
 	import Head from '$lib/Head.svelte';
 	import { validationSchema } from '../helpers/validationSchema';
 	import { fly } from 'svelte/transition';
+	import Toast from '../lib/Toast.svelte';
+	import { triggerToast } from '../stores/toastStore';
+
 	const { form, errors, handleChange, handleReset, isValid, isSubmitting, touched } = createForm({
 		initialValues: {
 			name: '',
@@ -14,12 +17,27 @@
 		},
 		validationSchema,
 		onSubmit: sendEmail
+		// validate: (values) => {
+		// 	let errs: { name?: string } = {};
+		// 	if (values.name === '') {
+		// 		errs.name = 'name required';
+		// 	}
+		// 	if(values.email === "") {
+
+		// 	}
+
+		// return errs;
+		// }
 	});
+
+	// console.log('valid', $isValid);
+	// console.log('t', $touched);
+	// console.log('v', $form.name);
 
 	// FIX: emailjs cannot type this event correctly
 	async function sendEmail(e: any) {
 		e.preventDefault();
-
+		isSubmitting.set(true);
 		try {
 			await emailjs.sendForm(
 				import.meta.env.VITE_SERVICE_ID,
@@ -27,9 +45,12 @@
 				'#emailform',
 				import.meta.env.VITE_USER_ID
 			);
+			triggerToast('Thanks for your message!');
 			handleReset();
 		} catch (err) {
-			console.log(err);
+			triggerToast('Something went wrong :(', 'error');
+		} finally {
+			isSubmitting.set(false);
 		}
 	}
 </script>
@@ -52,8 +73,9 @@
 		error={$errors.message}
 		label={'Message'}
 	/>
-	<Button type="submit" disabled={$isSubmitting || !$isValid || !$touched}>Submit</Button>
+	<Button type="submit" disabled={$isValid}>Submit</Button>
 </form>
+<Toast />
 
 <style lang="scss">
 	#emailform {
