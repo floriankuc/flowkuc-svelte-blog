@@ -1,18 +1,16 @@
 <script lang="ts">
 	export let label: string;
 	export let name: string;
-	export let handleChange: (event: Event) => any;
-	export let error: string;
-	export let value: string;
+	export let error: any;
 	export let type: 'input' | 'textarea' = 'input';
 </script>
 
 <div>
 	<label for={name}>{label}</label>
 	{#if type === 'input'}
-		<input id={name} {name} on:change={handleChange} bind:value />
+		<input id={name} {name} />
 	{:else}
-		<textarea id={name} {name} on:change={handleChange} bind:value />
+		<textarea id={name} {name} />
 	{/if}
 
 	{#if error}
