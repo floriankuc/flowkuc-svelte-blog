@@ -25,11 +25,14 @@
 	});
 </script>
 
+{#if tag && date}
 <ul>
 	<li>{tag ?? 'v'}</li>
 	<li>Sveltekit</li>
 	<li>{date || ''}</li>
 </ul>
+{/if}
+
 
 <style lang="scss">
 	@import '../styles/variables.scss';
