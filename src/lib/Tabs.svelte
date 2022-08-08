@@ -29,11 +29,7 @@
 
 	section {
 		display: flex;
-		gap: 4rem;
-
-		@media (max-width: $mq-sm) {
-			gap: 1rem;
-		}
+		gap: 2vw;
 	}
 
 	ul {
@@ -47,10 +43,10 @@
 
 	div {
 		flex-grow: 1;
-		height: 150px;
+		height: 10rem;
 
 		@media (max-width: $mq-sm) {
-			height: 380px;
+			height: 20rem;
 		}
 	}
 	ul {

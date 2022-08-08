@@ -30,9 +30,9 @@
 		}
 
 		@media (max-width: $mq-lg) {
-			padding-bottom: 0;
+			padding: 0;
 			justify-content: center;
-			height: 40px;
+			height: 44px;
 			background: $color-white;
 		}
 	}
