@@ -59,7 +59,6 @@
 	ul {
 		flex-direction: column;
 		gap: 3rem;
-		padding: 1rem;
 	}
 
 	span {
