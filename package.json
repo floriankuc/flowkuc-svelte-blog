@@ -1,6 +1,7 @@
 {
 	"name": "my-app",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"author": "Florian Kuc",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
