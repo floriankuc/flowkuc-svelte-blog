@@ -1,5 +1,8 @@
+<script>
+	const clientVersion = __version__;
+</script>
 <ul>
-	<li>{process.env.npm_package_version}</li>
+	<li>{clientVersion}</li>
 	<li>Sveltekit</li>
 </ul>
 
