@@ -11,7 +11,7 @@
 		<p>{project.description}</p>
 		<ul>
 			{#each project.topics as topic}
-				<li>{topic}</li>
+				<li><small>{topic}</small></li>
 			{/each}
 		</ul>
 	</div>

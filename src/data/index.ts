@@ -1,6 +1,6 @@
 import type { Position } from 'src/types';
 
-export const techs = ['ReactJS', 'CSS', 'HTML', 'Javascript', 'Typescript', 'Redux'];
+export const techs = ['React', 'CSS', 'HTML', 'JavaScript', 'TypeScript', 'Redux'];
 
 const eppendorf: Position = {
 	title: 'Web Developer',

@@ -19,6 +19,7 @@
 
 		li {
 			text-transform: uppercase;
+			font-family: 'Roboto Condensed';
 		}
 
 		@media (max-width: $mq-lg) {

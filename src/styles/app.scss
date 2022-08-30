@@ -4,7 +4,7 @@
 @import './prism-xonokai.css';
 
 :root {
-	font-family: 'Roboto Condensed', $font-fallback;
+	font-family: 'Roboto', $font-fallback;
 	font-size: 1rem;
 }
 
@@ -20,10 +20,10 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+	line-height: 1.6;
 	overflow-y: scroll;
 	background-color: $color-white;
-	font-family: 'Roboto Condensed';
+	font-family: 'Roboto';
 	font-size: 1rem;
 
 	> div {
@@ -44,6 +44,7 @@ h1 {
 	text-align: center;
 	font-weight: 900;
 	font-size: 16rem;
+	font-family: 'Roboto Condensed';
 
 	@media (max-width: $mq-xxxl) {
 		font-size: 11rem;
@@ -56,7 +57,7 @@ h1 {
 
 p {
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.6;
 	font-weight: 300;
 }
 

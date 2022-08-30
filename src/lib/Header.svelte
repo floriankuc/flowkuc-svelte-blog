@@ -52,5 +52,6 @@
 		letter-spacing: 0.1rem;
 		color: $color-black;
 		text-decoration: none;
+		font-family: 'Roboto Condensed';
 	}
 </style>
