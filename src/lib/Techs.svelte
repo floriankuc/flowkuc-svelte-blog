@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 </script>
 
+
 <script lang="ts">
   import { techs } from "../data";
 </script>

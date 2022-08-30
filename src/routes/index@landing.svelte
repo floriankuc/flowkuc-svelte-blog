@@ -26,10 +26,9 @@
 		<h1 in:fly={{ x: -10, delay: 200 }}>Flo</h1>
 		<p in:fly={{ x: -10, delay: 300 }}>
 			A web dev based in Hamburg, DE. Creating new things out of nothing and improving upon already
-			existent systems, processes and solutions is what I love about software development. I enjoy
-			both working independently and in a team and contributing to well-crafted and useful software
+			existent solutions is what I love about software development. I enjoy contributing to well-crafted and useful software
 			with intuitive and clear user experience. I am an avid learner and always looking into new
-			technologies that catch my attention. Happily working on exciting front end and cloud related
+			technologies that catch my attention. Happily working on exciting cloud related
 			projects in the life science sector at <a href="https://www.eppendorf.com" target="_blank"
 				>Eppendorf</a
 			>.
@@ -74,7 +73,7 @@
 
 		p {
 			margin-top: 3rem;
-			line-height: 1.1;
+			/* line-height: 1.1; */
 			width: 600px;
 
 			@media (max-width: $mq-sm) {
