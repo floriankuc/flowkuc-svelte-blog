@@ -9,6 +9,7 @@
 	import { validator } from '@felte/validator-yup';
 	import { schema } from '../helpers/validationSchema';
 	import Head from '$lib/Head.svelte';
+	import { flyer } from '../helpers';
 
 	const { form, reset, isSubmitting, errors, isValid, isDirty } = createForm({
 		onSubmit: sendEmail,
@@ -35,13 +36,13 @@
 </script>
 
 <Head title="Contact" />
-<p in:fly={{ x: -10 }}>
+<p in:fly={flyer(50)}>
 	If you'd like to get in touch, feel free to drop me a line. I am currently not looking for any new
 	opportunites in terms of permanent full-time position - I am however keen to do more open source
 	work or hear about promising side projects.
 </p>
 
-<form use:form id="emailform" in:fly={{ x: -10, delay: 100 }}>
+<form use:form id="emailform" in:fly={flyer(100)}>
 	<Input name="name" error={$errors.name} label={'Name'} />
 	<Input name="email" error={$errors?.email?.[0]} label={'Email'} />
 	<Input type="textarea" error={$errors.message} name="message" label={'Message'} />

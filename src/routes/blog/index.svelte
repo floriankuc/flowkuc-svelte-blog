@@ -17,12 +17,13 @@
 	import Head from '$lib/Head.svelte';
 	import type { Post } from 'src/types';
 	import { fly } from 'svelte/transition';
+	import { flyer } from '../../helpers';
 
 	export let posts: Post[];
 </script>
 
 <Head title="Blog" />
-<ul in:fly={{ x: -10 }}>
+<ul in:fly={flyer(50)}>
 	{#each posts as post}
 		<li>
 			<h2>

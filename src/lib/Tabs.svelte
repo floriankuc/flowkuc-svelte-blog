@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { flyer } from '../helpers';
 	export let items: { value: number; label: string; component: any }[] = [];
 	export let activeTabValue = 1;
 	import { fly } from 'svelte/transition';
 	const handleClick = (tabValue: number) => () => (activeTabValue = tabValue);
 </script>
 
-<section in:fly={{ x: -10 }}>
+<section in:fly={flyer(0)}>
 	<ul>
 		{#each items as item}
 			<li class:active={activeTabValue === item.value}>
@@ -16,7 +17,7 @@
 	{#each items as item}
 		{#key item}
 			{#if activeTabValue == item.value}
-				<div in:fly={{ x: -10 }}>
+				<div>
 					<svelte:component this={item.component} />
 				</div>
 			{/if}

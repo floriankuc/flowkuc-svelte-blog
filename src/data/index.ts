@@ -6,9 +6,10 @@ const eppendorf: Position = {
 	title: 'Web Developer',
 	time: '2022 - present',
 	bullets: [
-		'Implementing OIDC authentication in our customer facing web app',
-		'Developed and maintained code of UI components',
-		'Web component related discoveries with Svelte, Preact, StencilJS and SolidJS'
+		'Implementing OIDC authentication in front end',
+		'Developing and maintaining code of UI components',
+		'Web component related discoveries with Svelte, Preact, StencilJS and SolidJS',
+		'Set up AstroJS docs'
 	]
 };
 

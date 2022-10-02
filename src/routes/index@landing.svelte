@@ -1,6 +1,7 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { browser, dev } from '$app/env';
 	import Head from '$lib/Head.svelte';
+	import { flyer } from '../helpers';
 	import { fly } from 'svelte/transition';
 
 	// we don't need any JS on this page, though we'll load
@@ -14,17 +15,18 @@
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
+
 </script>
 
 <Head title="About" />
 
 <section>
-	<img alt="me" src="/images/me.jpg" in:fly={{ x: -10 }} />
+	<img alt="me" src="/images/me.jpg" in:fly={flyer(50)} />
 	<div>
-		<h1 in:fly={{ x: -10, delay: 100 }}>Hi</h1>
-		<h1 in:fly={{ x: -10, delay: 150 }}>I am</h1>
-		<h1 in:fly={{ x: -10, delay: 200 }}>Flo</h1>
-		<p in:fly={{ x: -10, delay: 300 }}>
+		<h1 in:fly={flyer(100)}>Hi</h1>
+		<h1 in:fly={flyer(150)}>I am</h1>
+		<h1 in:fly={flyer(200)}>Flo</h1>
+		<p in:fly={flyer(250)}>
 			A web dev based in Hamburg, DE. Creating new things out of nothing and improving upon already
 			existent solutions is what I love about software development. I enjoy contributing to well-crafted and useful software
 			with intuitive and clear user experience. I am an avid learner and always looking into new

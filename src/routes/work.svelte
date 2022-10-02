@@ -1,6 +1,8 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 	import { fly } from 'svelte/transition';
+	import { flyer } from '../helpers';
+
 	export const load: Load = async ({ fetch }) => {
 		const response = await fetch(
 			'https://api.github.com/users/floriankuc/repos?sort=created&direction=desc'
@@ -23,7 +25,8 @@
 	import Bookingtime from '$lib/employers/Bookingtime.svelte';
 	import Business from '$lib/employers/Business.svelte';
 	import type { Project as ProjectProps } from 'src/types';
-	import Techs from '$lib/Techs.svelte';
+	import { techs } from '../data';
+	import { arrayToString } from '../helpers';
 
 	export let projects: ProjectProps[];
 	let items = [
@@ -31,25 +34,26 @@
 		{ label: 'Bookingtime', value: 2, component: Bookingtime },
 		{ label: 'Business', value: 3, component: Business }
 	];
+
+	
 </script>
 
 <Head title="Work" />
 <Tabs {items} />
 
 <div>
-	<p in:fly={{ x: -10, delay: 100 }}>
-		All technologies I've
+	<p in:fly={flyer(150)}>
+		My main stack is {arrayToString(techs)}. All technologies I've
 		worked with so far can be found on
 		<a href="https://stackshare.io/floriankuc/my-stack#stack" target="_blank">stackshare</a>. Below
 		are some projects I have worked on outside work, sourced from my
-		<a href="https://github.com/floriankuc" target="_blank">Github profile</a>.
+		Github profile.
 		They are generally work in progress. Some on the verge of completion, others I may have abandoned entirely
-		in the light of something more captivating. My main stack is:
+		in the light of something more captivating. 
 	</p>
-	<Techs/>
 </div>
 
-<ul in:fly={{ x: -10, delay: 200 }}>
+<ul in:fly={flyer(250)}>
 	{#each projects as p}
 		<Project project={p} />
 	{/each}
